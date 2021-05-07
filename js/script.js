@@ -7,6 +7,15 @@ headerLogo.addEventListener("click", () => {
     navLinks.classList.toggle("open");
 
   });
+
+// Intro Section Text Animation
+
+var typed = new Typed('.typed-text', {
+    strings: ['Web Developer', 'Graphics Designer', 'Copy Writer'],
+    typeSpeed:60,
+    backSpeed: 60,
+    loop: true,
+  });
   
 
 // Header On scroll events
@@ -50,3 +59,20 @@ scrollBtn.addEventListener('click' , () => {
 })
 
 
+
+//    Client Section Auto Image Slider
+
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+   var slides = document.getElementsByClassName("fade");
+   for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";
+   }
+   slideIndex++;
+   if (slideIndex > slides.length) { slideIndex = 1 }
+   slides[slideIndex - 1].style.display = "block";
+   setTimeout(showSlides, 6000); // Change image every 2 seconds
+}

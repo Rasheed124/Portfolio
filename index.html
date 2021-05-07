@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,600;1,200;1,500;1,700&display=swap" rel="stylesheet">
     <!-- --Icons -->
     <link rel="stylesheet" href="css/all.css">
+    
     <title>Portfolio Theme</title>
 </head>
 <body>
@@ -42,7 +43,7 @@
             <div class="intro">
                 <h2>Welcome</h2>
                 <div class="intro-content">
-                    <h1>I'M A Graphic Designer.</h1>
+                    <h1>I'M A <span class="typed-text"></span>. </h1>
                     <p>It is a long established fact that a reader will be of a page when established
                      fact looking at its layout.</p>
                      <a href="#">
@@ -172,12 +173,33 @@
                 <h1>Our Client</h1>
                 <p>It is a long established fact that a reader will be of a page when established fact looking at its layout.</p>
                 <div class="client-card">
-                    <div class="card">
+                    <div class="card fade">
                         <i class="fa fa-quote-right" aria-hidden="true"></i>
-                        <img src="./img/about.jpg" alt="">
+                        <img src="./img/testi-1.jpg" alt="">
                         <p> " The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here.".</p>
                         <p> -Ebony Verty, <b>Evato</b></p>
                     </div>
+                    <div class="card fade">
+                        <i class="fa fa-quote-right" aria-hidden="true"></i>
+                        <img src="./img/testi-2.jpg" alt="">
+                        <p> " The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here.".</p>
+                        <p> -Ebony Verty, <b>Evato</b></p>
+                    </div>
+                    <div class="card fade">
+                        <i class="fa fa-quote-right" aria-hidden="true"></i>
+                        <img src="./img/testi-3.jpg" alt="">
+                        <p> " The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here.".</p>
+                        <p> -Ebony Verty, <b>Evato</b></p>
+                    </div>
+
+                    <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a> -->
+                    <!-- <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+                </div>
+
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
                 </div>
             </div>
         </div>
@@ -399,11 +421,9 @@
     
     </body>
     </html>
-    
 
-
-
-
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- <script src="js/typed.min.js"></script> -->
     <script src="js/script.js"></script>
 </body>
 </html>
