@@ -11,35 +11,35 @@ headerLogo.addEventListener("click", () => {
 // Intro Section Text Animation
 
 var typed = new Typed('.typed-text', {
-    strings: ['Web Developer', 'Graphics Designer', 'Copy Writer'],
+    strings: ['Rasheed Tolulope', ' A Graphics Designer', ' A Copy Writer'],
     typeSpeed:60,
     backSpeed: 60,
     loop: true,
   });
-  
+   
 
 // Header On scroll events
-// const header = document.querySelector(".header-main");
-// const sectionOne = document.querySelector(".intro-container");
-// const sectionOneOptions = {
-//   rootMargin: "-350px 0px 0px 0px"
-// };
+const header = document.querySelector(".header-nav");
+const sectionOne = document.querySelector(".intro-container");
+const sectionOneOptions = {
+  rootMargin: "-400px 0px 0px 0px"
+};
 
-// const sectionOneObserver = new IntersectionObserver(function(
-//   entries,
-//   sectionOneObserver
-// ) {
-//   entries.forEach(entry => {
-//     if (!entry.isIntersecting) {
-//       header.classList.add("scrolled");
-//     } else {
-//       header.classList.remove("scrolled");
-//     }
-//   });
-// },
-// sectionOneOptions);
+const sectionOneObserver = new IntersectionObserver(function(
+  entries,
+  sectionOneObserver
+) {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
+},
+sectionOneOptions);
 
-// sectionOneObserver.observe(sectionOne);
+sectionOneObserver.observe(sectionOne);
 
 // Page back to top button
 const scrollBtn = document.querySelector('.scroll-btn') ;

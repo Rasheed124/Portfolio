@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rasheed Portfolio Website">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Rasheed">
     <link rel="stylesheet" href="css/style.css">
 
     <!-- -Google Fonts -->
@@ -11,8 +16,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,600;1,200;1,500;1,700&display=swap" rel="stylesheet">
     <!-- --Icons -->
     <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/cssanimation.min.css">
+    <link rel="icon" href="themefavicon.ico">
     
-    <title>Portfolio Theme</title>
+    <title>Rasheed Portfolio Theme</title>
 </head>
 <body>
     
@@ -26,12 +33,13 @@
                 </div>
             </div>
             <ul class="menu ">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Client</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Portfolio</a></li>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#about-section">About us</a></li>
+                <li><a href="#service-section">Services</a></li>
+                <li><a href="#client-section">Client</a></li>
+                <li><a href="#contact-section">Contact</a></li>
+                <li><a href="#blog-section">Blog</a></li>
+                <li><a href="#work-section">Portfolio</a></li>
             </ul>
        </nav>      
     
@@ -43,7 +51,7 @@
             <div class="intro">
                 <h2>Welcome</h2>
                 <div class="intro-content">
-                    <h1>I'M A <span class="typed-text"></span>. </h1>
+                    <h1>I'M <span class="typed-text"></span>. </h1>
                     <p>It is a long established fact that a reader will be of a page when established
                      fact looking at its layout.</p>
                      <a href="#">
@@ -52,8 +60,7 @@
                         </button>
                      </a>
                 </div>
-                <div class="intro-animate">
-                    <a href="#">
+                <div class="intro-animate cssanimation hu__hu__">                <a href="#navigate" >
                       <span></span>
                     </a>
                 </div>
@@ -64,11 +71,11 @@
     </section> 
 
     <!-- About Section -->
-    <section id="about-section">
+    <section id="about-section" >
         <div class="about-container">
-            <div class="about">
-                    <img src="./img/about.jpg" alt="">
-                <div class="about-content">
+            <div class="about" id="navigate">
+                    <img src="./img/rash.png" alt="rasheed image">
+                  <div class="about-content">
                     <h1>About me</h1>
                     <h3>Hello! I'M <span> Rasheed Tolulope.</span></h3>
                     <p>It is a long established fact that a reader will be distracted by the readable content 
@@ -111,24 +118,28 @@
                 <h1>Our Services</h1>
                 <p>It is a long established fact that a reader will be of a page when established fact looking at its layout.</p>
                 <div class="service-card">
-                    <div class="card">
-                        <i class="fa fa-chart-line" aria-hidden="true"></i>
-                        <h3>Graphic Design</h3>
-                        <span></span>
-                        <p>There are many variations of passages of but the majority have suffered alteration in some form.</p>
+                    <div class="service-one">
+                        <div class="card ">
+                            <i class="fa fa-info-circle" aria-hidden="true"></i>
+                            <h3>Unlimited Wifi</h3>
+                            <span></span>
+                            <p>There are many variations of passages of but the majority have suffered alteration in some form.</p>
+                        </div>
+                        <div class="card">
+                            <i class="fa fa-id-card" aria-hidden="true"></i>
+                            <h3>Responsive Design</h3>
+                            <span></span>
+                            <p>There are many variations of passages of but the majority have suffered alteration in some form.</p>
+                        </div>
+                        <div class="card">
+                            <i class="fa fa-info-circle" aria-hidden="true"></i>
+                            <h3>Easy to customize</h3>
+                            <span></span>
+                            <p>There are many variations of passages of but the majority have suffered alteration in some form.</p>
+                        </div>
                     </div>
-                    <div class="card">
-                        <i class="fa fa-trophy" aria-hidden="true"></i>
-                        <h3>Unlimited Color</h3>
-                        <span></span>
-                        <p>There are many variations of passages of but the majority have suffered alteration in some form.</p>
-                    </div>
-                    <div class="card">
-                        <i class="fa fa-upload" aria-hidden="true"></i>   
-                        <h3>Media Marketing</h3>
-                        <span></span>
-                        <p>There are many variations of passages of but the majority have suffered alteration in some form.</p>
-                    </div>
+    
+                <div class="service-two">
                     <div class="card">
                         <i class="fa fa-info-circle" aria-hidden="true"></i>
                         <h3>Unlimited Wifi</h3>
@@ -147,6 +158,8 @@
                         <span></span>
                         <p>There are many variations of passages of but the majority have suffered alteration in some form.</p>
                     </div>
+                </div>
+
                 </div>
             </div>
         </div>
@@ -175,19 +188,19 @@
                 <div class="client-card">
                     <div class="card fade">
                         <i class="fa fa-quote-right" aria-hidden="true"></i>
-                        <img src="./img/testi-1.jpg" alt="">
+                        <img src="./img/testi-1.jpg" alt="rasheed image">
                         <p> " The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here.".</p>
                         <p> -Ebony Verty, <b>Evato</b></p>
                     </div>
                     <div class="card fade">
                         <i class="fa fa-quote-right" aria-hidden="true"></i>
-                        <img src="./img/testi-2.jpg" alt="">
+                        <img src="./img/testi-2.jpg" alt="rasheed image">
                         <p> " The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here.".</p>
                         <p> -Ebony Verty, <b>Evato</b></p>
                     </div>
                     <div class="card fade">
                         <i class="fa fa-quote-right" aria-hidden="true"></i>
-                        <img src="./img/testi-3.jpg" alt="">
+                        <img src="./img/testi-3.jpg" alt="rasheed image"
                         <p> " The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here.".</p>
                         <p> -Ebony Verty, <b>Evato</b></p>
                     </div>
@@ -209,7 +222,7 @@
     <section id="work-section">
         <div class="work-container">
             <div class="work">
-                <h1>Our Services</h1>
+                <h1>Our Portfolio</h1>
                 <p>It is a long established fact that a reader will be of a page when established fact looking at its layout.</p>
                 <div class="work-card">
                     <div class="work-navigator">
@@ -241,58 +254,62 @@
                     </div>
                     <div class="card-container">
                         <div class="card">
-                            <div class="card-flow">
-                                <div class="flow">
-                                    <img src="./img/1.jpg" alt="">
+                            <div class="cardflow-one">
+                                <div class="card-flow">
+                                    <div class="flow">
+                                        <img src="./img/1.jpg" alt="rasheed image">
+                                    </div>
+                                    <div class="text">
+                                        <h4>Designer</h4>
+                                        <p>projects</p>
+                                    </div>
                                 </div>
-                                <div class="text">
-                                    <h4>Designer</h4>
-                                    <p>projects</p>
+                                <div class="card-flow">
+                                    <div class="flow">
+                                        <img src="./img/2.jpg" alt="rasheed image">
+                                    </div>
+                                    <div class="text">
+                                        <h4>Designer</h4>
+                                        <p>projects</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="card-flow">
-                                <div class="flow">
-                                    <img src="./img/2.jpg" alt="">
-                                </div>
-                                <div class="text">
-                                    <h4>Designer</h4>
-                                    <p>projects</p>
-                                </div>
-                            </div>
-                            <div class="card-flow">
-                                <div class="flow">
-                                    <img src="./img/3.jpg" alt="">
-                                </div>
-                                <div class="text">
-                                    <h4>Designer</h4>
-                                    <p>projects</p>
-                                </div>
-                            </div>
-                            <div class="card-flow">
-                                <div class="flow">
-                                    <img src="./img/4.jpg" alt="">
-                                </div>
-                                <div class="text">
-                                    <h4>Designer</h4>
-                                    <p>projects</p>
+                                <div class="card-flow">
+                                    <div class="flow">
+                                        <img src="./img/3.jpg" alt="rasheed image">
+                                    </div>
+                                    <div class="text">
+                                        <h4>Designer</h4>
+                                        <p>projects</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="card-flow">
-                                <div class="flow">
-                                    <img src="./img/5.jpg" alt="">
+                            <div class="cardflow-two">
+                                <div class="card-flow">
+                                    <div class="flow">
+                                        <img src="./img/1.jpg" alt="rasheed image">
+                                    </div>
+                                    <div class="text">
+                                        <h4>Designer</h4>
+                                        <p>projects</p>
+                                    </div>
                                 </div>
-                                <div class="text">
-                                    <h4>Designer</h4>
-                                    <p>projects</p>
+                                <div class="card-flow">
+                                    <div class="flow">
+                                        <img src="./img/2.jpg" alt="rasheed image">
+                                    </div>
+                                    <div class="text">
+                                        <h4>Designer</h4>
+                                        <p>projects</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="card-flow">
-                                <div class="flow">
-                                    <img src="./img/6.jpg" alt="">
-                                </div>
-                                <div class="text">
-                                    <h4>Designer</h4>
-                                    <p>projects</p>
+                                <div class="card-flow">
+                                    <div class="flow">
+                                        <img src="./img/3.jpg" alt="rasheed image">
+                                    </div>
+                                    <div class="text">
+                                        <h4>Designer</h4>
+                                        <p>projects</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -309,7 +326,7 @@
             <p>It is a long established fact that a reader will be of a page when established fact looking at its layout.</p>
             <div class="blog-card">
                     <div class="card">
-                        <img src="./img/blog-1.jpg" alt="">
+                        <img src="./img/blog-1.jpg" alt="rasheed image">
                         <article>
                             <h4>There are many variations</h4>
                             <p>11 March 2018 <span>By Rasheed</span> </p>
@@ -318,7 +335,7 @@
                         </article>
                     </div>
                     <div class="card">
-                        <img src="./img/blog-2.jpg" alt="">
+                        <img src="./img/blog-2.jpg" alt="rasheed image">
                         <article>
                             <h4>Contrary to popular belief</h4>
                             <p>11 March 2018 <span>By Rasheed</span> </p>
@@ -327,7 +344,7 @@
                         </article>
                   </div>
                     <div class="card">
-                        <img src="./img/blog-3.jpg" alt="">
+                        <img src="./img/blog-3.jpg" alt="rasheed image">
                         <article>
                             <h4>Lorem Ipsum is not simply</h4>
                             <p>11 March 2018 <span>By Rasheed</span> </p>
@@ -399,7 +416,7 @@
                     <i class="fab fa-linkedin" aria-hidden="true"></i>
                 </a>
                 <a href="#">
-                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                    <i class="fab fa-whatsapp" aria-hidden="true"></i>
                 </a>
                 <a href="#">
                     <i class="fab fa-instagram" aria-hidden="true"></i>
@@ -414,16 +431,13 @@
     </footer>
 
 
-
-
-
     
     
     </body>
     </html>
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <!-- <script src="js/typed.min.js"></script> -->
+    <script src="js/letteranimation.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

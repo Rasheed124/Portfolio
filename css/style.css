@@ -15,6 +15,9 @@ button{
     border-radius: 50px;
 }
 
+html{
+    scroll-behavior: smooth;
+}
 
 /* ------------Global Colors */
 :root{
@@ -34,7 +37,7 @@ body{
 .header-nav{
     display: flex;
     flex-direction: column;
-    padding: 10px 30px;
+    padding: 15px 30px;
     position: fixed;
     width: 100%;
     z-index: 20;
@@ -46,6 +49,10 @@ body{
     justify-content: space-between !important;
     z-index: 1;
 }
+.header h1{
+    font-size: 30px ;
+    letter-spacing: 2px;
+}
 .header-nav .menu{
     list-style: none;
     position: absolute;
@@ -56,7 +63,6 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     transform: translateY(-1000px);
     transition: transform 1.3s ease-in-out;
     z-index: 2;
@@ -72,10 +78,12 @@ body{
 .header-nav ul a{
     text-decoration: none;
     color: var(--primary-color);
+    display: block;
 }
-.header-nav ul a:hover{
+.header-nav ul a.active{
     color: var(--acent-bg);
 }
+
 .header-logo i{
     margin-top: 7px;
     font-size: 23px;
@@ -93,7 +101,7 @@ body{
     background-blend-mode: color-burn;
 }
 .intro-container{
-    padding: 20% 0%;
+    padding-top: 15%;
     padding-bottom: 25%;
     position: relative;
     top: 50px;
@@ -113,12 +121,13 @@ body{
 }
 .intro-container .intro-content h1{
     padding: 0px 30px 25px 30px;
-    font-size: 30px;
+    font-size: 35px;
     word-spacing: 5px;
+    font-weight: bolder;
 }
 .intro-container .intro-content p{
-    font-size: 17px;
-    padding: 0px 18px 30px 18px ;
+    font-size: 18px;
+    padding: 0px 25px 30px 25px ;
     color: var(--global-color);
 }
 .intro-container .intro-content .intro-btn{
@@ -157,6 +166,8 @@ body{
 }
 .about-container .about{
     padding: 70px 10px;
+    display: flex;
+    flex-direction: column;
 }
 .about img{
     max-width: 100%;
@@ -218,10 +229,9 @@ body{
 .service-container .service > p{
     font-size: 15px;
     font-family: 500;
-    color: #fff;
     padding: 8px 20px;
-    opacity: 0.8;
     line-height: 24px;
+    color: var(--primary-color);
 }
 .service .service-card{
     display: flex;
@@ -237,18 +247,18 @@ body{
     cursor: pointer;
 }
 .service .service-card .card i{
-    color: #e65f78;
+    color: var(--acent-bg);
     font-size: 30px;
 }
 .service .service-card .card h3{
-    color: #fff;
+    color: var(--global-color);
     font-size: 24px;
     font-weight: bold;
     padding-top: 20px;
     margin-bottom: -25px;
 }
 .service .service-card .card span{
-    border-bottom:  2px solid #e65f78;
+    border-bottom:  2px solid var(--acent-bg);
     padding: 20px;
 }
 .service .service-card .card:hover span{
@@ -258,10 +268,9 @@ body{
 .service .service-card .card p{
     font-size: 17px;
     font-family: 500;
-    color: #fff;
     padding: 40px 10px;
-    opacity: 0.8;
     line-height: 24px;
+    color: var(--primary-color);
 }
 
 
@@ -276,17 +285,24 @@ body{
 .hire-container .hire h1{
     font-size: 30px;
     font-weight: bold;
-    color: #fff;
+    color: var(--global-color);
     padding: 20px 0px;
 }
 .hire-container .hire .hire-btn{
-    background-color: #e65f78;
+    background-color: var(--acent-bg);
     border: none;
     padding: 16px 35px;
     border-radius: 10px;
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 600;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+}
+.hire-container .hire .hire-btn:hover{
+    background-color: rgb(207, 119, 135);
+    transition: all .4s ease-in-out;
+
 }
 
 /* Client Section */
@@ -305,9 +321,8 @@ body{
 .client-container .client > p{
     font-size: 15px;
     font-family: 500;
-    color: #fff;
+    color: var(--primary-color);
     padding: 8px 20px;
-    opacity: 0.8;
     line-height: 24px;
 }
 .client .client-card{
@@ -325,7 +340,7 @@ body{
     width: auto;
     padding: 16px;
     margin-top: -22px;
-    color: white;
+    color: var(--global-color);
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
@@ -340,25 +355,23 @@ body{
     right: 0;
     border-radius: 3px 0 0 3px;
   }
-  /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
 }
-/* The dots/bullets/indicators */
 .dot {
     cursor: pointer;
     height: 15px;
     width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
+    margin: 0px 2px;
+    background-color: var(--acent-bg);
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
   }
   
-  .active, .dot:hover {
+  /* .active, .dot:hover {
     background-color: #717171;
-  }
+  } */
   
   /* Fading animation */
   .fade {
@@ -381,7 +394,7 @@ body{
   
 .client .client-card i{
     display: block;
-    color: #e65f78;
+    color: var(--acent-bg);
     font-size: 30px;
     margin-bottom: 30px;
 }
@@ -396,9 +409,8 @@ body{
 .client .client-card p{
     font-size: 19px;
     font-weight: 300;
-    color: #fff;
+    color: var(--global-color);
     padding: 8px 15px;
-    opacity: 0.8;
     line-height: 24px;
     font-style: italic;
 }
@@ -419,14 +431,13 @@ body{
 .work-container .work h1{
     font-size: 30px;
     font-family: 600;
-    color: #fff;
+    color:var(--global-color);
 }
 .work-container .work > p{
     font-size: 15px;
     font-family: 500;
-    color: #fff;
+    color: var(--primary-color);
     padding: 8px 20px;
-    opacity: 0.8;
     line-height: 24px;
 }
 .work .work-card{
@@ -445,10 +456,11 @@ body{
    
 }
 .work-card .work-navigator button[class$='btn1']{
-    background-color: #e65f78;
+    background-color: var(--acent-bg);
 }
 .work-card .work-navigator button:hover[class$='btn']{
-    background-color: #e65f78;
+    background-color: var(--acent-bg);
+
     transition: background-color .5s ease-in;
 }
 
@@ -466,7 +478,7 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, 210%);
-    color: #fff;
+    color: var(--global-color);
     z-index: -2;
 }
 .card-container .card-flow:hover .text{
@@ -480,7 +492,6 @@ body{
     max-width: 100%;
     transform: scale(1);
     transition: transform .5s ease-out;
-   
 }
 .card-container .card-flow .flow::before{
     display: block;
@@ -519,14 +530,13 @@ body{
 .blog-container .blog h1{
     font-size: 30px;
     font-family: 600;
-    color: #fff;
+    color: var(--global-color);
 }
 .blog-container .blog > p{
     font-size: 15px;
     font-family: 500;
-    color: #fff;
+    color: var(--primary-color);
     padding: 8px 20px;
-    opacity: 0.8;
     line-height: 24px;
 }
 .blog .blog-card{
@@ -539,6 +549,7 @@ body{
     padding: 5px;
     background-color: var(--bg1);
     margin-top: 40px;
+    box-shadow: 2px 3px 30px var(--bg1-color) ;
 }
 .blog .blog-card img{
     max-width: 100%;
@@ -550,29 +561,28 @@ body{
 .blog .blog-card .card article h4:only-of-type{
     font-weight: bold;
     font-size: 23px;
-    color: #fff;
+    color: var(--global-color);
     padding-bottom: 15px;
 }
 .blog .blog-card .card article p:nth-child(2){
     font-weight: 500;
     opacity: 0.8;
     font-size: 18px;
-    color: #fff;
+    color: var(--global-color);
     padding-bottom: 15px;
 }
 .blog .blog-card .card article p:nth-child(2) > span {
-    color: #e65f78;
+    color: var(--acent-bg);
     font-weight: bold;
 }
 .blog .blog-card .card article p:nth-child(3){
-    font-weight: 500;
-    opacity: 0.8;
     font-size: 15px;
-    color: #fff;
+    font-weight: 500;
+    color: var(--primary-color);
     padding-bottom: 15px;
 }
 .blog .blog-card .card article a:last-child{
-    color: #fff;
+    color: var(--global-color);
     opacity: 0.8;
     font-weight: 700;
     text-decoration: none;
@@ -590,14 +600,13 @@ body{
 .contact-container .contact h1{
     font-size: 30px;
     font-family: 600;
-    color: #fff;
+    color: var(--global-color);
 }
 .contact-container .contact > p{
     font-size: 15px;
     font-family: 500;
-    color: #fff;
+    color: var(--primary-color);
     padding: 8px 20px;
-    opacity: 0.8;
     line-height: 24px;
 }
 .contact .contact-card{
@@ -606,19 +615,18 @@ body{
     padding: 30px 0px 50px 0px;
 }
 .contact .contact-card .card i{
-    color: #e65f78;
+    color: var(--acent-bg);
     font-size: 40px;
 }
 .contact .contact-card .card h4{
     padding-top: 20px;
     font-size: 20px;
     font-weight: bold;
-    color: #fff;
+    color: var(--global-color);
 }
 .contact .contact-card .card p{
     font-size: 18px;
-    color: #fff;
-    opacity: 0.8;
+    color: var(--primary-color);
     padding-bottom: 35px;
 }
 .contact .contact-form {
@@ -630,7 +638,7 @@ body{
     border: 2px solid #3b3e42;
     background-color: transparent;
     padding: 20px 10px;
-    color:rgb(165, 146, 146);
+    color: #3b3e42;
     margin: 10px 0px;
     outline: none;
     font-size: 16px;
@@ -646,25 +654,33 @@ body{
     text-transform: capitalize;
 }
 .contact .contact-form input:focus{
-    border: 2px solid #e65f78;
+    border: 2px solid var(--acent-bg);
     transition: border .7s ease-in-out;
 }
-.contact .contact-form input::placeholder{
-    color:rgb(165, 146, 146);
+.contact .contact-form input::placeholder,
+.contact .contact-form textarea::placeholder{
+    color: var(--primary-color);
 }
 .contact .contact-form textarea:focus{
-    border: 2px solid #e65f78;
+    border: 2px solid var(--acent-bg);
     transition: border .7s ease-in-out;
 
 }
 .contact .contact-form a button{
-    background-color: #e65f78;
+    background-color: var(--acent-bg);
     border: none;
     padding: 20px 20px;
     border-radius: 8px;
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 600;
+    transition: all .4s ease-in-out;
+
+}
+.contact .contact-form a button:hover{
+    background-color: rgb(207, 119, 135);
+    transition: all .4s ease-in-out;
+
 }
 .contact .contact-form a{
     display: block;
@@ -681,20 +697,20 @@ body{
 }
 .footer-container .footer a {
     display: inline-block;
-    color: var(--bg2);
-}
-.footer-container .footer a i {
-    color:rgba(255,255,255,.2);
     padding: 8px;
-    font-size: 20px;
     border-radius: 50px;
     background-color:  rgba(241, 241, 241, 0.08);
+
+}
+.footer-container .footer a i {
+    color: var(--primary-color);
+    font-size: 20px;
 }
 .footer-container  p{
     font-size: 20px;
     padding: 30px 30px;
     font-weight: 600;
-    color:rgba(255,255,255,.2);
+    color: var(--primary-color);
 }
 .scroll-btn {
     position: fixed;
@@ -727,3 +743,251 @@ body{
 
 
 /* ------Media Queries  */
+
+@media screen and (min-width: 375px){
+    
+    /* ---All Section Paragraph */
+    .service-container .service > p,
+    .client-container .client > p,
+    .work-container .work > p,
+    .blog-container .blog > p,
+    .contact-container .contact > p{
+        padding: 8px 35px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .header-nav{
+        padding: 15px 35px;
+    }
+    .header-logo i{
+        font-size: 27px;
+    }
+
+
+/* -------Intro Section */
+    .intro-container{
+        top: 25px;
+        padding-bottom: 15%;
+    }
+    .intro-container .intro-content p{
+        font-size: 18px;
+        padding: 0px 20% 30px 20% ;
+        line-height: 25px;
+    }
+    /* --------About Section */
+    .about-container .about{
+        padding: 70px 30px;
+    }
+
+    /* ---All Section Paragraph */
+    .service-container .service > p,
+    .client-container .client > p,
+    .work-container .work > p,
+    .blog-container .blog > p,
+    .contact-container .contact > p{
+        padding: 8px 20%;
+        font-size: 17px;
+    }
+/* ----Service Section  */
+    .service .service-card{
+        margin: 35px 20px;
+    }
+    .service .service-card .card{
+        padding: 25px 40px;
+    }
+
+/* Work Section */
+    .work-card .card-container .card{
+        margin: 30px 27px;
+    }
+    .blog .blog-card .card article p:nth-child(3){
+        font-size: 18px;
+    }
+    /* Footer Section */
+    #footer-section .footer-container{
+        padding: 8% 0%;
+    }
+}
+
+@media screen and (min-width: 950px){
+    .header-nav{
+        background-color: transparent;
+        color: var(--global-color);
+    }
+    .header-nav .menu{
+        background-color: transparent;
+        transform: translateY(0px);
+        flex-direction: row;
+        top: 18px;
+        justify-content: flex-end;
+        padding-right: 40px;
+    }
+    .header-logo i{
+        display: none;
+    }
+    .header-nav ul a{
+        font-size: 15px;
+        color: var(--primary-color);
+        font-weight: bold;
+    }
+
+    .scrolled{
+        background-color: var(--global-color);
+        color: #000;
+        transition: all .7s ease-out
+    }
+    /* -------Intro Section */
+    .intro-container{
+        padding-top: 8%;
+        padding-bottom: 5%;
+        top: 0px;
+    }
+/* --------About Section */
+
+    .about-container .about{
+        padding: 70px 10px;
+        display: flex;
+        flex-direction: row;
+    }
+    .about img{
+        max-width: 45%;
+    }
+    .about .about-content{
+        max-width: 55%;
+        margin-left: 30px;
+    }
+    /* ----Service Section  */
+    .service .service-card{
+        flex-direction: column;
+    }
+    .service .service-card .service-one,
+    .service .service-card .service-two
+    {
+        display: flex;
+        flex-direction: row;
+    }
+    .service .service-card .card{
+        margin-right: 20px;
+        /* max-width: 50%; */
+    }
+    /* -----Client Section */
+    .client .client-card p{
+        padding: 8px 10%;
+    }
+/* ---------WOrk Sectio */
+    .work-card .card-container .card{
+        flex-direction: column;
+    }
+    .work .card-container .card .cardflow-one,
+    .work .card-container .card .cardflow-two
+    {
+        display: flex;
+        flex-direction: row;
+    }
+    .card-container .card-flow {
+        margin-right: 20px;
+    }
+    /* -----Blog Section */
+    .blog .blog-card{
+        flex-direction: row;
+    }
+    /* -----Contact Section */
+    .contact .contact-card{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+    }
+    .contact .contact-card .card{
+        margin-right: 50px; 
+    }
+    /* ---Footer Section */
+    #footer-section .footer-container{
+        padding: 5% 0%;
+    }
+    .footer-container  p{
+        padding: 30px 7px;
+    }
+}
+@media screen and (min-width: 1024px){
+        /* ---All Section Paragraph */
+    .service-container .service > p,
+    .client-container .client > p,
+    .work-container .work > p,
+    .blog-container .blog > p,
+    .contact-container .contact > p{
+        padding: 8px 25%;
+        font-size: 18px;
+    }
+}
+@media screen and (min-width: 1440px) , (min-width: 2560px){
+    .intro-container .intro-content h1{
+        font-size: 45px;
+        word-spacing: 20px;
+    }
+    /* ----ABout Section */
+    .about-container .about{
+        padding: 70px 80px;
+    }
+    .about .about-content{
+        align-self: flex-start;
+    }
+    .about img{
+        align-self: flex-end;
+        border: 5px solid #4d5052;
+        width: 58%;
+        height: 500px;
+    }
+    .about .about-content h1{
+        font-size: 40px;
+    }
+    .about .about-content h3{
+        font-size: 35px;
+    }
+    .about .about-content p{
+        font-size: 20px;
+        margin-top: 18px;
+        line-height: 32px;
+    }
+
+    /* ---All Section Paragraph */
+    .service-container .service > p,
+    .client-container .client > p,
+    .work-container .work > p,
+    .blog-container .blog > p,
+    .contact-container .contact > p{
+        padding: 8px 30%;
+        font-size: 18px;
+    }
+
+    .service .service-card,
+    .client .client-card{
+        padding: 10px 80px;
+    }
+
+    .work-card .card-container .card
+    {
+        margin: 30px 80px;
+    }
+
+    .blog .blog-card{
+        margin: 30px 80px;
+        line-height: 30px;
+    }
+    .blog .blog-card .card{
+        margin-right: 20px;
+    }
+    .blog .blog-card img{
+        margin: 10px;
+    }
+    .blog .blog-card article{
+        margin-left: 10px;
+    }
+    .contact .contact-card .card{
+        margin-right: 80px; 
+    }
+    .contact .contact-form {
+        margin: 0px 6%;
+    }
+}
