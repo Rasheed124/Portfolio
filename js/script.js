@@ -1,17 +1,22 @@
 
-const headerLogo = document.querySelector('.header-logo');
+const headerLogo = document.querySelector('.header-logo i');
+const headerOpen = document.querySelector('.header-logo .open');
+const headerClose = document.querySelector('.header-logo .close');
 const navLinks = document.querySelector('.menu');
 
 
 headerLogo.addEventListener("click", () => {
     navLinks.classList.toggle("open");
+    // headerClose.classList.toggle("show");
+
+    // headerOpen.style.display = "none"
 
   });
 
 // Intro Section Text Animation
 
 var typed = new Typed('.typed-text', {
-    strings: ['Rasheed Tolulope', ' A Graphics Designer', ' A Copy Writer'],
+    strings: ['Rasheed Tolulope', 'A web Developer' ,' A Graphics Designer'],
     typeSpeed:60,
     backSpeed: 60,
     loop: true,
@@ -74,5 +79,5 @@ function showSlides() {
    slideIndex++;
    if (slideIndex > slides.length) { slideIndex = 1 }
    slides[slideIndex - 1].style.display = "block";
-   setTimeout(showSlides, 6000); // Change image every 2 seconds
+   setTimeout(showSlides, 5000); // Change image every 2 seconds
 }
