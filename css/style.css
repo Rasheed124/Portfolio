@@ -84,19 +84,32 @@ body{
 .header-nav ul a.active{
     color: var(--acent-bg);
 }
-.header-logo{
-    position: relative;
-}
-.header-logo i{
-    margin-top: 7px;
-    font-size: 23px;
-    z-index: 30;
-    display: block;
-    z-index: 10;
+.header-nav .nav_harmbuger{
+    cursor: pointer;
+    top: 20px;
+    right: 40px;
     position: absolute;
 }
-
-
+.header-nav .nav_harmbuger div{
+    width: 23px;
+    height: 2px;
+    z-index: 6;
+    display: block;
+    margin-top: 7px;
+    transition: all 1s ease-in-out;
+    background-color: rgba(0,0,0,0.8);
+}
+.toggle .line1{
+    transform: rotate(45deg)  translate(4px , 11px);
+    transition: transform 0.8s ease ;
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(-45deg)  translate(3px , -9px) ;
+    transition: transform 0.8s ease ;
+}
 
 /* -------Intro Section */
 #intro-section{
@@ -830,7 +843,7 @@ body{
         justify-content: flex-end;
         padding-right: 40px;
     }
-    .header-logo i{
+    .header-nav .nav_harmbuger{
         display: none;
     }
     .header-nav ul a{

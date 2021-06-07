@@ -1,17 +1,15 @@
 
-const headerLogo = document.querySelector('.header-logo i');
-const headerOpen = document.querySelector('.header-logo .open');
-const headerClose = document.querySelector('.header-logo .close');
-const navLinks = document.querySelector('.menu');
+const navHarburger = document.querySelector(".nav_harmbuger ")
+const navMenu =  document.querySelector(".menu");
 
+// Toggle Nav
 
-headerLogo.addEventListener("click", () => {
-    navLinks.classList.toggle("open");
-    // headerClose.classList.toggle("show");
+navHarburger.addEventListener("click", () => {
+    navMenu.classList.toggle("open");
 
-    // headerOpen.style.display = "none"
-
-  });
+        //  Burger Show
+        navHarburger.classList.toggle('toggle');
+});
 
 // Intro Section Text Animation
 
