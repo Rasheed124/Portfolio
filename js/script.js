@@ -35,8 +35,10 @@ const sectionOneObserver = new IntersectionObserver(function(
   entries.forEach(entry => {
     if (!entry.isIntersecting) {
       header.classList.add("scrolled");
+      document.querySelector(".header .headerlogo").style = "color: rgb(160, 160, 172)";
     } else {
       header.classList.remove("scrolled");
+      document.querySelector(".header .headerlogo").style = "color: white";
     }
   });
 },
@@ -79,3 +81,24 @@ function showSlides() {
    slides[slideIndex - 1].style.display = "block";
    setTimeout(showSlides, 5000); // Change image every 2 seconds
 }
+
+
+const workNavigator = document.querySelector(".work-navigator");
+const cardFlow = document.querySelectorAll(".card-flow");
+
+workNavigator.addEventListener("click", function(e){
+  if(e.target.tagName = "li"){
+     const showNavigor = document.querySelector(e.target.dataset.pop);
+     cardFlow.forEach(card =>{
+       if(card =  showNavigor ){
+          card.classList.add('display')
+       }
+       else{
+        card.classList.remove('display')
+       }
+     })
+  }
+
+
+
+})

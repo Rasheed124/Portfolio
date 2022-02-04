@@ -54,6 +54,13 @@ body{
     font-size: 30px ;
     letter-spacing: 2px;
 }
+#header-id  .header .headerlogo{
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    /* z-index: 10; */
+    
+}
 .header-nav .menu{
     list-style: none;
     position: absolute;
@@ -466,6 +473,12 @@ body{
 .work-card .work-navigator {
     padding: 0px 10px;
 }
+.work-card .work-navigator li{
+    list-style: none;
+    /* padding: 0px 10px; */
+    display: inline-block;
+    cursor: pointer;
+}
 .work-card .work-navigator button {
     cursor: pointer;
 }
@@ -492,6 +505,10 @@ body{
 .card-container .card-flow{
     margin-bottom: 5px;
     position: relative;
+    display: block;
+}
+.card-container .display{
+    display: none;
 }
 .card-flow .text{
     position: absolute;

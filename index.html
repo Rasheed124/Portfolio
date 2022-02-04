@@ -22,12 +22,16 @@
     <title>Rasheed Portfolio Theme</title>
 </head>
 <body>
+
     
     <!-- Header------- -->
-    <header>
+    <header id="header-id" >
         <nav class="header-nav  ">
             <div class="header">
-                <h1>Rash</h1>
+               <a href="#header-id" class="headerlogo">
+                 <h1>Rash</h1>
+               </a>
+             
                 <div class="nav_harmbuger">
                     <div class="line1"></div>
                     <div class="line2"></div>
@@ -228,36 +232,36 @@
                 <p>It is a long established fact that a reader will be of a page when established fact looking at its layout.</p>
                 <div class="work-card">
                     <div class="work-navigator">
-                        <a href="#">
+                        <li >
                             <button class="wnav-btn1">
                                 All
                             </button>
-                        </a>
-                        <a href="#">
+                        </li>
+                        <li  data-pop="#seo">
                             <button class="wnav-btn">
                                 SEO
                             </button>
-                        </a>
-                        <a href="#">
+                        </li>
+                        <li  data-pop="#design">
                             <button class="wnav-btn">
                                 Webdesisgn
                             </button>
-                        </a>
-                        <a href="#">
+                        </li>
+                        <li data-pop="#work">
                             <button class="wnav-btn">
                                Work
                             </button>
-                        </a>
-                        <a href="#">
+                        </li>
+                        <li data-pop="#wpress">
                             <button class="wnav-btn">
                                Wordpress
                             </button>
-                        </a>
+                        </li>
                     </div>
                     <div class="card-container">
                         <div class="card">
                             <div class="cardflow-one">
-                                <div class="card-flow">
+                                <div class="card-flow " id="seo">
                                     <div class="flow">
                                         <img src="./img/1.jpg" alt="rasheed image">
                                     </div>
@@ -266,7 +270,7 @@
                                         <p>projects</p>
                                     </div>
                                 </div>
-                                <div class="card-flow">
+                                <div class="card-flow " id="seo">
                                     <div class="flow">
                                         <img src="./img/2.jpg" alt="rasheed image">
                                     </div>
@@ -275,7 +279,7 @@
                                         <p>projects</p>
                                     </div>
                                 </div>
-                                <div class="card-flow">
+                                <div class="card-flow" id="design">
                                     <div class="flow">
                                         <img src="./img/3.jpg" alt="rasheed image">
                                     </div>
@@ -286,7 +290,7 @@
                                 </div>
                             </div>
                             <div class="cardflow-two">
-                                <div class="card-flow">
+                                <div class="card-flow " id="design">
                                     <div class="flow">
                                         <img src="./img/1.jpg" alt="rasheed image">
                                     </div>
@@ -295,7 +299,7 @@
                                         <p>projects</p>
                                     </div>
                                 </div>
-                                <div class="card-flow">
+                                <div class="card-flow " id="wpress">
                                     <div class="flow">
                                         <img src="./img/2.jpg" alt="rasheed image">
                                     </div>
@@ -304,7 +308,7 @@
                                         <p>projects</p>
                                     </div>
                                 </div>
-                                <div class="card-flow">
+                                <div class="card-flow " id="work">
                                     <div class="flow">
                                         <img src="./img/3.jpg" alt="rasheed image">
                                     </div>
@@ -403,7 +407,6 @@
     </div>
     </section>
 
-
     <!-- Footer Section -->
     <footer id="footer-section">
         <div class="footer-container">
@@ -441,5 +444,6 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="js/letteranimation.js"></script>
     <script src="js/script.js"></script>
+
 </body>
 </html>
